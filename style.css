@@ -1,4 +1,55 @@
-body{
-    background-color: hsl(0, 7%, 13%);
-    color: whitesmoke;
+:root {
+    --dark: hsl(228, 8%, 12%);
+    --blue: hsl(193, 93%, 51%);
+    --dark-blue: hsl(193, 93%, 36%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+h1{
+    line-height: 1;
+}
+
+.container {
+    border: 2px solid var(--blue);
+    max-width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+}
+
+label {
+    margin-right: 0.5rem;
+}
+
+input {
+    max-width: 5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--white);
+    outline: 1px solid var(--white);
+    padding: 0.25rem 0.75rem;
+    border-color: transparent;
+    border-radius: 0.25rem;
+    transition: background-color 250ms ease-in-out,
+    outline-offset 250ms ease-in-out;
+}
+
+button:hover {
+ background-color: var(--dark-blue);
+ outline-offset: 0.1rem;
+}
+
+.answer {
+    display: inline-block;
 }
